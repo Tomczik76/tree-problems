@@ -1,9 +1,9 @@
-##Motivation
+## Motivation
 This is an attempt to solve two problems constructing Binary Trees using Recursion Schemes.
 
 Recursion schemes factor out recursive patterns, so that the programmer can focus on the problem domain and avoid common mistakes implementing recursive algorithms.
 
-###Links
+### Links
 [Introduction to Recursion Schemes in Scala](https://free.cofree.io/2017/11/13/recursion/)
 
 [Original Paper on Recursion Schemes](https://maartenfokkinga.github.io/utwente/mmf91m.pdf)
