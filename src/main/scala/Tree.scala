@@ -1,5 +1,5 @@
 trait Tree
-case class Root[A](left: Tree, right: Tree) extends Tree
+case class Root(left: Tree, right: Tree) extends Tree
 case class Node[A](left: Tree, right: Tree, value: A) extends Tree
 case class Leaf[A](value: A) extends Tree
 
