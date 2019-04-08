@@ -7,7 +7,7 @@ object Schemes {
   def cata[F[_] : Functor, A](f: F[A] => A): Fix[F] => A =
     fix => f(fix.unFix.map(cata(f)))
 
-  def para[F[_] : Functor, A](f: F[(Fix[F], A)] => A): Fix[F] => A =
-    fix => f(fix.unFix.map(fix => fix -> para(f).apply(fix)))
+  def hyloSimple[F[_] : Functor, A, B](f: F[B] => B)(g: A => F[A]): A => B =
+    ana(g) andThen cata(f)
 
 }

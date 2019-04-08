@@ -14,8 +14,7 @@ object Problems {
 
         case (_, value) => LeafF(value)
       }
-    val fix = Schemes.ana(coAlgebra(5, "0", "1")).apply((0, ""))
-    Tree(fix)
+    Schemes.hyloSimple(Tree.algebra)(coAlgebra(5, "0", "1")).apply((0, ""))
   }
 
   def problem2: Tree = {
@@ -33,13 +32,11 @@ object Problems {
 
         case (_, col, _) => LeafF(('A' + col).toChar.toString)
       }
-    val fix = Schemes.ana(coAlgebra(5, "0", "1")).apply((0, 0, ""))
-    Tree(fix)
+    Schemes.hyloSimple(Tree.algebra)(coAlgebra(5, "0", "1")).apply((0, 0, ""))
   }
 
   def main(args: Array[String]): Unit = {
     println(problem1)
-
     println(problem2)
   }
 }
